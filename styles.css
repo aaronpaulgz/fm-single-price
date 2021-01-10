@@ -1,13 +1,136 @@
 :root {
   --Cyan: hsl(179, 62%, 43%);
+  --Light-Cyan: #4abebd;
   --Bright-Yellow: hsl(71, 73%, 54%);
   --Light-Gray: hsl(204, 43%, 93%);
   --Grayish-Blue: hsl(218, 22%, 67%);
   --Font: "Karla", "sans-serif";
 }
 
+.c {
+  border: solid 1px red;
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: var(--Font);
+}
+
+body {
+  background-color: white;
+  overflow-x: hidden;
+}
+
+.main--container {
+  display: flex;
+  flex-direction: column;
+}
+
+.info--container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 32px 24px;
+}
+
+.info--container h1 {
+  font-size: 1.6rem;
+  color: var(--Cyan);
+  /* max-width: 360px; */
+}
+
+.info--container h2 {
+  margin: 20px 0 0 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+  color: var(--Bright-Yellow);
+}
+
+.info--container p {
+  margin: 16px 0 0 0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.8rem;
+  color: var(--Grayish-Blue);
+}
+
+.subscription--container {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 24px;
+  background-color: var(--Cyan);
+}
+
+.subscription--container .subscription--title {
+  font-size: 1.6rem;
+  color: #fff;
+}
+
+.subscription--container .subscription--pricing-container {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.subscription--container .subscription--pricing {
+  color: var(--Light-Gray);
+  margin: 14px 0 0 8px;
+  font-size: 0.9rem;
+}
+
+.subscription--container .subscription--price {
+  margin: 16px 0 0 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.subscription--container .subscription--description {
+  color: var(--Light-Gray);
+  margin: 8px 0 0 0;
+  font-size: 0.9rem;
+}
+
+.subscription--container button {
+  margin: 24px 0 0 0;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  width: 100%;
+  /* min-width: 280px; */
+  min-height: 48px;
+  background-color: var(--Bright-Yellow);
+  font-family: var(--Font);
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  -webkit-box-shadow: 0px 12px 24px 2px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 0px 12px 24px 2px rgba(0, 0, 0, 0.24);
+  box-shadow: 0px 12px 24px 2px rgba(0, 0, 0, 0.24);
+}
+
+.why {
+  /* height: 100%; */
+  padding: 32px 24px;
+  background-color: var(--Light-Cyan);
+  color: #fff;
+}
+
+.why h3 {
+  font-size: 1.6rem;
+  color: #fff;
+}
+
+.why ul {
+  margin: 18px 0 0 0;
+}
+
+.why ul li {
+  list-style: none;
+  margin: 8px 0;
+  font-size: 0.9rem;
+  color: var(--Light-Gray);
 }
