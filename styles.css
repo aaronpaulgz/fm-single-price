@@ -20,12 +20,18 @@
 
 body {
   background-color: white;
-  overflow-x: hidden;
+  background-color: var(--Light-Gray);
+  /* height: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .main--container {
   display: flex;
   flex-direction: column;
+  max-width: 660px;
+  max-height: 560px;
 }
 
 .info--container {
@@ -33,6 +39,7 @@ body {
   flex-direction: column;
   text-align: left;
   padding: 32px 24px;
+  background-color: white;
 }
 
 .info--container h1 {
@@ -134,26 +141,43 @@ body {
 }
 
 @media screen and (min-width: 767px) {
+  body {
+    height: 100vh;
+  }
+
+  .main--container {
+    -webkit-box-shadow: 0px 12px 24px 2px rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0px 12px 24px 2px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 12px 24px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 16px;
+  }
+
   article {
     display: flex;
   }
 
   .info--container {
     padding: 48px 32px;
+    border-radius: 16px 16px 0 0;
   }
 
   .subscription--container,
   .why {
     width: 50%;
-    padding: 48px 32px;
+    padding: 32px 32px;
   }
 
   .subscription--container {
     display: flex;
     flex-direction: column;
+    border-radius: 0 0 0 16px;
   }
 
   .subscription--container h3 {
     margin-top: 24px;
+  }
+
+  .why {
+    border-radius: 0 0 16px 0;
   }
 }
