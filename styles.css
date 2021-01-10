@@ -38,7 +38,6 @@ body {
 .info--container h1 {
   font-size: 1.6rem;
   color: var(--Cyan);
-  /* max-width: 360px; */
 }
 
 .info--container h2 {
@@ -100,7 +99,7 @@ body {
   border-radius: 4px;
   outline: none;
   width: 100%;
-  /* min-width: 280px; */
+  max-width: 320px;
   min-height: 48px;
   background-color: var(--Bright-Yellow);
   font-family: var(--Font);
@@ -113,7 +112,6 @@ body {
 }
 
 .why {
-  /* height: 100%; */
   padding: 32px 24px;
   background-color: var(--Light-Cyan);
   color: #fff;
@@ -133,4 +131,29 @@ body {
   margin: 8px 0;
   font-size: 0.9rem;
   color: var(--Light-Gray);
+}
+
+@media screen and (min-width: 767px) {
+  article {
+    display: flex;
+  }
+
+  .info--container {
+    padding: 48px 32px;
+  }
+
+  .subscription--container,
+  .why {
+    width: 50%;
+    padding: 48px 32px;
+  }
+
+  .subscription--container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .subscription--container h3 {
+    margin-top: 24px;
+  }
 }
